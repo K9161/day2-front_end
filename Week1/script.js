@@ -1,4 +1,4 @@
-
+/*
 
 
 //task1 :-
@@ -34,17 +34,9 @@ function handleClick()
 
  function temp(t)
  {
-     if (t>=30)
+     
      {
-         console.log("hot")
-     }
-     else if(t<30&&t===30)
-     {
-         console.log("cold")
-     }
-     else 
-     {
-         console.log("not of these")
+    console.log(t>=30?"hot":"cold")
      }
  }
 
@@ -113,7 +105,8 @@ switch(studentfaculty)
 }
 }
 check("commerce") 
-
+/*switch is better than if because it is easier when we have many cases for the same variable */
+/*
 //exm 6
 function get(n1,n2)
 {
@@ -128,3 +121,73 @@ function get(n1,n2)
     }
 }
 get(1,10)
+
+*/
+
+
+
+/*
+//task2:
+//exm1
+var arr=["Always use === instead of ==",
+        "Use const by default",
+        "Keep your code clean",
+        "Use meaningful variable names",
+        "Avoid global variables",
+        "Break code into functions",
+        "Use console.log for debugging",
+        "Practice regularly",
+        "Comment complex code",
+        "Learn from errors"
+    ];
+
+    for(var i=0; i<arr.length; i++)
+    {
+        document.getElementById('tip').innerHTML="Tip of the day is : "+arr[i]
+        
+    }
+    
+
+//exm2
+function Datenow()
+{
+    
+    document.getElementById('date').innerHTML=new Date().toLocaleString();
+}
+
+//exm3
+
+var email = prompt("Enter your email");
+
+var i = email.indexOf("@");
+
+if(i != -1 && i != 0 && i != email.length-1)
+{
+    console.log("Valid Email");
+}
+else
+{
+    console.log("Invalid Email");
+}
+*/
+//exm5
+
+var arr=[60,100,10,15,85]
+arr.sort(function(a,b)
+{
+    return b-a
+})
+console.log(arr)
+
+var highDegree=arr.find(function(num)
+{
+    return num<=100
+})
+console.log(highDegree)
+
+var fail= arr.filter(function(num2)
+
+{
+    return num2<60
+})
+console.log(fail)
