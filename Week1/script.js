@@ -1,5 +1,3 @@
-/*
-
 
 //task1 :-
 //exm1
@@ -106,7 +104,10 @@ switch(studentfaculty)
 }
 check("commerce") 
 /*switch is better than if because it is easier when we have many cases for the same variable */
-/*
+
+
+
+
 //exm 6
 function get(n1,n2)
 {
@@ -122,8 +123,97 @@ function get(n1,n2)
 }
 get(1,10)
 
+//exm7
+
+function mathexpretion() {
+            var exp = prompt("Enter math expression (Ex: 3+4*5/10*8)");
+            
+            var result = calculate(exp);
+
+            alert(result);
+        }
+
+        function calculate(expression) {
+            return eval(expression);// بتحول النص لعملية حسابية 
+        }
+
+
+
+//exm8
+
+    var name;
+    while (true) {
+        name = prompt("Enter your name:");
+
+        
+        if (name && isNaN(name)) {
+            break;
+        } else {
+            alert("Invalid name..Please enter a valid string");
+        }
+    }
+
+   
+    var birthYear;
+    while (true) {
+        birthYear =Number( prompt("Enter your birth year:"));
+
+        
+        if ( birthYear < 2010) {
+            break;
+        } 
+        else {
+            alert("Invalid year! Enter a number less than 2010.");
+        }
+    }
+
+    
+    var currentYear = new Date().getFullYear();
+    var age = currentYear - birthYear;
+
+   
+    document.write("Name: " + name);
+    document.write("Birth year: " + birthYear  );
+    document.write("Age: " + age );
+
+
+/*  1-
+function foo() {
+    var x;
+    x = 5;
+    y = 6;    return x + y;
+    when ue trict ..>uneinddd
+    not ussing it..>result =11
+}
+
+/*2-
+var y;	
+y=10; 
+x = 5; 
+console.log(x); 
+console.log(y);
+console.log(foo());
+"not use because y is not defined"
 */
 
+/*3
+What’s the value of y variable in the following code? And why?
+var x = 5; 
+console.log(x); 
+console.log(y); 
+var y = 7; 
+
+"undeinedd because of hoisting ..>y is declared but not assigned value yet"
+*/
+
+
+//4 ?????
+/*
+bouns 1-
+for (var i = 1; i <= 6; i++) {
+    document.write("<h" + i + ">welcome to my page</h" + i + ">");
+}
+*/
 
 
 /*
@@ -147,14 +237,20 @@ var arr=["Always use === instead of ==",
         
     }
     
+*/
 
+/*
 //exm2
 function Datenow()
 {
     
     document.getElementById('date').innerHTML=new Date().toLocaleString();
 }
+*/
 
+
+
+/*
 //exm3
 
 var email = prompt("Enter your email");
@@ -169,8 +265,9 @@ else
 {
     console.log("Invalid Email");
 }
-*/
-//exm5
+
+/*
+//exm6
 
 var arr=[60,100,10,15,85]
 arr.sort(function(a,b)
@@ -190,4 +287,4 @@ var fail= arr.filter(function(num2)
 {
     return num2<60
 })
-console.log(fail)
+console.log(fail)*/
