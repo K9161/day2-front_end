@@ -2,7 +2,8 @@
 
 //task2:
 //exm1
-var arr=["Always use === instead of ==",
+var arr=[
+    "Always use === instead of ==",
         "Use const by default",
         "Keep your code clean",
         "Use meaningful variable names",
@@ -13,15 +14,15 @@ var arr=["Always use === instead of ==",
         "Comment complex code",
         "Learn from errors"
     ];
-
-    for(var i=0; i<arr.length; i++)
-    {
-        document.getElementById('tip').innerHTML="Tip of the day is : "+arr[i]
-        
-    }
+   var randomIndex = Math.floor(Math.random() *10);
+   console.log(randomIndex);
+   
+ var randomTip = arr[randomIndex];
+ console.log(randomTip)
     
 
-
+/*
+   
 
 //exm2
 function Datenow()
@@ -137,15 +138,15 @@ console.log(arr)
 
 function showDate() {
 
-    let input = prompt("Enter your birth date (DD-MM-YYYY)");
+    var input = prompt("Enter your birth date (DD-MM-YYYY)");
 
     if (isValidDate(input)) {
 
-        let day = parseInt(input.substring(0, 2));
-        let month = parseInt(input.substring(3, 5)) - 1; 
-        let year = parseInt(input.substring(6));
+        var day = parseInt(input.substring(0, 2));
+        var month = parseInt(input.substring(3, 5)) - 1; 
+        var year = parseInt(input.substring(6));
 
-        let date = new Date(year, month, day);
+        var date = new Date(year, month, day);
 
         alert(date.toDateString());
 
@@ -164,3 +165,4 @@ function isValidDate(str) {
 }
 //........
 
+*/
