@@ -10,10 +10,18 @@
 
 </head>
 <body>
-    <input type="text" id="ussername"value="user name" required>
-    <input type="password" id="password" value="password" required>
-    <button onclick="saveData()">Login</button>
-    
+
+    <form onsubmit="ALLData()">
+        <input type="text" id="username" placeholder="Enter username"><br><br>
+        <input type="password" id="password" placeholder="Enter password"><br><br>
+        <input type="checkbox" id="rememberMe"> Remember Me <br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+
+
+
     <script src="script6.js"></script>
 
 </body>

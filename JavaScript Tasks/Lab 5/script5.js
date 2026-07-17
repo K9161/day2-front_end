@@ -148,7 +148,7 @@ function showDate() {
 
         var date = new Date(year, month, day);
 
-        alert(date.toDateString());
+        alert(date.tod());
 
     } else {
         alert("Wrong Date Format");
@@ -166,3 +166,41 @@ function isValidDate(str) {
 //........
 
 */
+
+
+//bonus
+//1-
+window.onerror = function (message) {
+    alert("Error handled by onerror: " + message)
+}
+
+function getDay(d) {
+    var date = new Date(d);
+
+    if (isNaN(date)) {
+        throw "Invalid date!"
+    }
+
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    y= days[date.getDay()]
+    return y;
+}
+
+
+var input = prompt("Enter date:")
+var day = getDay(input)
+alert("Day is: " + day)
+
+
+//4-
+ 
+var birthDate = prompt("Enter your birth date")
+var colorLetter = prompt("enter the color r/b/g?")
+var colors = {
+    r: "red",
+    b: "blue",
+    g: "green"
+}
+var chosenColor = colors[colorLetter];
+var currentDate = new Date().toLocaled()
+console.log("%cCurrent Date: " + currentDate, "color: " + chosenColor + "; font-weight: bold;")
