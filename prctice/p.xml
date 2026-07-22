@@ -1,0 +1,24 @@
+<!--4
+
+<courses>
+    <course>
+        <name>HTML</name>
+        <duration>2 months</duration>
+    </course>
+    <course>
+        <name>CSS</name>
+        <duration>1 month</duration>
+    </course>
+</courses>-->
+
+
+<courses>
+    <course>
+        <name>Html</name>
+        <duration>22</duration>
+    </course>
+    <course>
+        <name>css</name>
+        <duration>20</duration>
+    </course>
+</courses>

@@ -37,55 +37,107 @@ sassion storage..>violated
 
 //exm3
 
-var id = Number(prompt("enter id"));
-var name = prompt("enter name");
-var age = Number(prompt("enter age"));
-var address = prompt("enter address");
 
-var person = {
-    id: id,
-    name: name,
-    age: age,
-    address: address,
-    skills: ["html", "css", "js"],
-    isLeader: true
-};
-var y=localStorage.setItem("person", JSON.stringify(person));
-var data = JSON.parse(localStorage.getItem("person"));
-console.log(data);
+        // =========================
+        // 1) Students Array
+        // =========================
 
-//exm4
-var students = [
-    {
-        id: 1,
-        name: "Amany",
-        age: 21,
-        address: "Beni Suef",
-        skills: ["HTML", "css"],
-        isLeader: true
-    },
-    {
-        id: 2,
-        name: "sara",
-        age: 22,
-        address: null,
-        skills: ["JS", "React"],
-        isLeader: false
-    },
-    {
-        id: 3,
-        name: "Esraa",
-        age: 20,
-        address: "Cairo",
-        skills: ["HTML", "CSS", "JS"],
-        isLeader: true
-    }
-]
-for(var i=0;i<students.length;i++)
-{
-    console.log("name:"+students[i].name)
-        console.log("skills:"+students[i].skills)
-}
+        var students = [
+            {
+                id: 1,
+                name: "Amany",
+                age: 21,
+                address: "Beni Suef",
+                skills: ["HTML", "CSS"],
+                isLeader: true
+            },
+            {
+                id: 2,
+                name: "Sara",
+                age: 22,
+                address: null, // المطلوب
+                skills: ["JS", "React"],
+                isLeader: false
+            },
+            {
+                id: 3,
+                name: "Esraa",
+                age: 20,
+                address: "Cairo",
+                skills: ["HTML", "CSS", "JS"],
+                isLeader: true
+            }
+        ];
+
+        var studentsDiv = document.getElementById("students");
+
+        for (var i = 0; i < students.length; i++) {
+
+            studentsDiv.innerHTML += `
+                <div class="card">
+                    <h3>${students[i].name}</h3>
+                    <p>Skills: ${students[i].skills.join(", ")}</p>
+                </div>
+            `;
+        }
+
+
+        // =========================
+        // 2) AJAX API
+        // =========================
+
+        var usersData = [];
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://reqres.in/api/users");
+
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+
+                var response = JSON.parse(xhr.responseText);
+                usersData = response.data;
+
+                var select = document.getElementById("users");
+
+                usersData.forEach(function(user){
+                    select.innerHTML += `
+                        <option value="${user.id}">
+                            ${user.first_name} ${user.last_name}
+                        </option>
+                    `;
+                });
+            }
+        };
+
+        xhr.send();
+
+
+        // =========================
+        // 3) Show Selected User
+        // =========================
+
+        function showUser() {
+
+            var id = document.getElementById("users").value;
+
+            var user = usersData.find(function(u){
+                return u.id == id;
+            });
+
+            var div = document.getElementById("userData");
+
+            if (user) {
+                div.innerHTML = `
+                    <div class="card">
+                        <h3>${user.first_name} ${user.last_name}</h3>
+                        <img src="${user.avatar}" width="150">
+                        <p>Email: ${user.email}</p>
+                    </div>
+                `;
+            } else {
+                div.innerHTML = "";
+            }
+        }
 
 /*
 1-yes 
@@ -94,4 +146,6 @@ json..> uses in js, easy
 
 */
 
-//exm5
+
+
+//5-
