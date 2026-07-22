@@ -38,9 +38,7 @@ sassion storage..>violated
 //exm3
 
 
-        // =========================
-        // 1) Students Array
-        // =========================
+        
 
         var students = [
             {
@@ -82,10 +80,6 @@ sassion storage..>violated
         }
 
 
-        // =========================
-        // 2) AJAX API
-        // =========================
-
         var usersData = [];
 
         var xhr = new XMLHttpRequest();
@@ -112,9 +106,6 @@ sassion storage..>violated
         xhr.send();
 
 
-        // =========================
-        // 3) Show Selected User
-        // =========================
 
         function showUser() {
 
@@ -148,4 +139,3 @@ json..> uses in js, easy
 
 
 
-//5-
