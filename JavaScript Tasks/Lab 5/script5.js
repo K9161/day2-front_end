@@ -201,6 +201,23 @@ var colors = {
     b: "blue",
     g: "green"
 }
-var chosenColor = colors[colorLetter];
-var currentDate = new Date().toLocaled()
+var chosenColor = colors[colorLetter]
+var currentDate = new Date().toLocaleDateString()
 console.log("%cCurrent Date: " + currentDate, "color: " + chosenColor + "; font-weight: bold;")
+
+//5-
+function checkDate(dateString) {
+    var date = new Date(dateString);
+
+    if (isNaN(date)) throw "Invalid date!";
+
+    return date;
+}
+
+try {
+    var input = prompt("Enter your birth date:");
+    var d = checkDate(input);
+    alert(d.toLocaleDateString());
+} catch (e) {
+    alert(e);
+}
