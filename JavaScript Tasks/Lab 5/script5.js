@@ -218,6 +218,6 @@ try {
     var input = prompt("Enter your birth date:");
     var d = checkDate(input);
     alert(d.toLocaleDateString());
-} catch (e) {
-    alert(e);
+} catch (error) {
+    alert(error)
 }
