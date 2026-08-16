@@ -1,0 +1,40 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+<!--  3  -->
+    <form onsubmit="ALLData()">
+        <input type="text" id="username" placeholder="Enter username"><br><br>
+        <input type="password" id="password" placeholder="Enter password"><br><br>
+        <input type="checkbox" id="rememberMe"> Remember Me <br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+
+
+<!-- 4  -->
+   
+    <h2>Students Data</h2>
+    <div id="students"></div>
+
+    <hr>
+
+    <h2>Select User from API</h2>
+
+    <select id="users" onchange="showUser()">
+        <option value="">Select User</option>
+    </select>
+
+    <div id="userData"></div>
+    <script src="script6.js"></script>
+
+</body>
